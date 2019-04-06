@@ -25,10 +25,10 @@ function generateNewQuestion(){
         <div>
           <form id="QuestionChoices">
             <fieldset class = "questionFormat">
-                        <span class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[0]}" name="Choice" checked> ${STORE[questionNumber].answers[0]} </input></span>
-                            <span class= "formSpan"><input type="radio"   value="${STORE[questionNumber].answers[1]}" name="Choice"> ${STORE[questionNumber].answers[1]} </input></span>
-            <span class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[2]}"name="Choice"> ${STORE[questionNumber].answers[2]} </input></span>
-           <span class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[3]}" name="Choice"> ${STORE[questionNumber].answers[3]} </input></span>
+              <label class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[0]}" name="Choice" checked> ${STORE[questionNumber].answers[0]} </input></label>
+              <label class= "formSpan"><input type="radio"   value="${STORE[questionNumber].answers[1]}" name="Choice"> ${STORE[questionNumber].answers[1]} </input></label>
+              <label class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[2]}"name="Choice"> ${STORE[questionNumber].answers[2]} </input></label>
+             <label class= "formSpan"><input type="radio"  value="${STORE[questionNumber].answers[3]}" name="Choice"> ${STORE[questionNumber].answers[3]} </input></label>
            </fieldset>
           </form>
           <div class="button">
@@ -144,8 +144,7 @@ $('#question_container').html(`<div class="questionFormat"> <span class ="formSp
 function reStart(){
   $('#question_container').on('click','#js_restart',function(event){
     event.preventDefault();
-    window.location.reload();
-    //$('body').html('#startPage');
+    location.reload();
   });
   console.log('reStart ran');
 };
