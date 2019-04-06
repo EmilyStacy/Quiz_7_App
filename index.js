@@ -3,16 +3,28 @@
 let questionNumber = 0;
 //set up the score
 let questionScore = 0;
-//render questions template 
-function startTheQuiz(){
-  $('#js-button').on('click',function (event){
+
+function startQuestion (event){
     event.preventDefault();
    $('#h1Title').hide();
    $('#h2Title').hide();
    $('#js-button').hide();
    $("#newQuestion").text(1);
    generateNewQuestion();
-  });
+  }
+
+  function reset (event){
+    event.preventDefault();
+   $('#h1Title, #h2Title, #js-button').show();
+   $('#question_container').html('');
+   $("#newQuestion").text(1);
+   questionNumber = 0;
+   questionScore = 0;
+  }
+
+//render questions template 
+function startTheQuiz(){
+  $('#js-button').on('click', startQuestion);
 };
 //CSS formating does not look right. Keep working later;pull in questions
 //new question format
@@ -136,18 +148,16 @@ $('#question_container').html(`<div class="questionFormat"> <span class ="formSp
   });
  };
   console.log('finalResult ran!');
-  reStart();
+  listenToreStart();
 };
 
 //
 //restart
-function reStart(){
-  $('#question_container').on('click','#js_restart',function(event){
-    event.preventDefault();
-    location.reload();
-  });
+function listenToreStart(){
+  $('#question_container').on('click','#js_restart', reset);
   console.log('reStart ran');
 };
+
 
 /*finalfunction*/
 
