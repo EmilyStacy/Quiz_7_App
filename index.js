@@ -14,6 +14,7 @@ function startTheQuiz(){
    generateNewQuestion();
   });
 };
+//final version is on GitHub
 //CSS formating does not look right. Keep working later;pull in questions
 //new question format
 function generateNewQuestion(){
