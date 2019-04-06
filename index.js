@@ -1,5 +1,6 @@
 
-// set up the question number to start
+
+// set up the question number to 0
 let questionNumber = 0;
 //set up the score
 let questionScore = 0;
