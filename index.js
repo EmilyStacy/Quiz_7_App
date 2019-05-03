@@ -1,6 +1,5 @@
 
-
-// set up the question number to 0
+// set up the question number 
 let questionNumber = 0;
 //set up the score
 let questionScore = 0;
@@ -19,6 +18,7 @@ function startQuestion (event){
    $('#h1Title, #h2Title, #js-button').show();
    $('#question_container').html('');
    $("#newQuestion").text(1);
+   $("#newScore").text(0);
    questionNumber = 0;
    questionScore = 0;
   }
@@ -27,7 +27,6 @@ function startQuestion (event){
 function startTheQuiz(){
   $('#js-button').on('click', startQuestion);
 };
-//final version is on GitHub
 //CSS formating does not look right. Keep working later;pull in questions
 //new question format
 function generateNewQuestion(){
